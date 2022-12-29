@@ -1,66 +1,28 @@
-
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      /* Use a custom font for the cheat codes */
-      @font-face {
-        font-family: 'GTAFont';
-        src: url('gta-font.ttf') format('truetype');
-      }
+<head>
+  <title>Snake Game</title>
+  <style>
+    /* Some basic styling for the page */
+    body {
+      background-color: #fafafa;
+      margin: 0;
+      padding: 0;
+    }
 
-      /* Use a neon color scheme for the cheat codes */
-      .cheat-code {
-        color: #00ffff;
-        text-shadow: 0 0 10px #00ffff;
-        font-family: 'GTAFont';
-        font-size: 24px;
-      }
+    canvas {
+      display: block;
+      margin: 0 auto;
+      background-color: #fff;
+      border: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <!-- The canvas element where the game will be drawn -->
+  <canvas id="game" width="400" height="400"></canvas>
 
-      /* Add a hover effect for the cheat codes */
-      .cheat-code:hover {
-        color: #ff00ff;
-        text-shadow: 0 0 10px #ff00ff;
-      }
-
-      /* Use a grid layout to display the cheat codes */
-      .cheat-codes-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-gap: 20px;
-      }
-
-      /* Style the cheat code categories */
-      .cheat-code-category {
-        font-family: 'GTAFont';
-        font-size: 36px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #ffff00;
-      }
-    </style>
-    <title>GTA V Cheat Codes</title>
-  </head>
-  <body>
-    <h1 class="cheat-code-category">Health and Armor</h1>
-    <div class="cheat-codes-grid">
-      <div class="cheat-code">HEALTHANDARMOR</div>
-      <div class="cheat-code">TURTOISE</div>
-      <div class="cheat-code">PAINKILLER</div>
-    </div>
-
-    <h1 class="cheat-code-category">Weapons</h1>
-    <div class="cheat-codes-grid">
-      <div class="cheat-code">TOOLUP</div>
-      <div class="cheat-code">FULLCLIP</div>
-      <div class="cheat-code">HIGHEX</div>
-    </div>
-
-    <h1 class="cheat-code-category">Vehicles</h1>
-    <div class="cheat-codes-grid">
-      <div class="cheat-code">BIGBANG</div>
-      <div class="cheat-code">BARNSTORM</div>
-      <div class="cheat-code">COMET</div>
-    </div>
-  </body>
+  <!-- JavaScript file that contains the game logic -->
+  <script src="game.js"></script>
+</body>
 </html>
