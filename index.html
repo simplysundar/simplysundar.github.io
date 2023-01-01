@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Snake Game</title>
-  <style>
-    /* Some basic styling for the page */
-    body {
-      background-color: #fafafa;
-      margin: 0;
-      padding: 0;
-    }
-
-    canvas {
-      display: block;
-      margin: 0 auto;
-      background-color: #fff;
-      border: 1px solid #ddd;
-    }
-  </style>
+  <title>Password Generator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="main.js"></script>
 </head>
 <body>
-  <!-- The canvas element where the game will be drawn -->
-  <canvas id="game" width="400" height="400"></canvas>
-
-  <!-- JavaScript file that contains the game logic -->
-  <script src="game.js"></script>
+  <h1>Password Generator</h1>
+  <form>
+    <label for="length">Password Length:</label><br>
+    <input type="number" id="length" name="length" min="8" max="64"><br>
+    <input type="checkbox" id="uppercase" name="uppercase">
+    <label for="uppercase">Include uppercase letters</label><br>
+    <input type="checkbox" id="lowercase" name="lowercase">
+    <label for="lowercase">Include lowercase letters</label><br>
+    <input type="checkbox" id="numbers" name="numbers">
+    <label for="numbers">Include numbers</label><br>
+    <input type="checkbox" id="symbols" name="symbols">
+    <label for="symbols">Include symbols</label><br>
+    <button type="button" onclick="generatePassword()">Generate Password</button>
+  </form> 
+  <br>
+  <label for="password">Generated Password:</label><br>
+  <input type="text" id="password" name="password" readonly>
+  <br><br>
+  <button type="button" onclick="copyPassword()">Copy to Clipboard</button>
+  <br><br>
+  <script src="main.js"></script>
 </body>
 </html>
